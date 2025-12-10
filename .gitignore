@@ -1,6 +1,27 @@
-venv/
+# --- Python ---
 __pycache__/
+*.py[cod]
+*$py.class
+
+# --- Ambiente Virtual ---
+venv/
+.venv/
+env/
+
+# --- Variáveis de Ambiente (SEGURANÇA CRÍTICA) ---
 .env
+
+# --- VS Code ---
+.vscode/
+
+# --- PyInstaller (Gerados na hora do EXE) ---
+build/
+dist/
+*.spec
+
+# --- Arquivos de Sistema ---
 .DS_Store
-*.pdf
-*.srt
+Thumbs.db
+
+# --- Logs ---
+*.log
