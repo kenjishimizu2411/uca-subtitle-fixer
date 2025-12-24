@@ -1,73 +1,73 @@
-# 🎬 UCA - SubFix (AI Subtitle Studio)
+# 🎬 UCA - SubFix (Estúdio de Legendas com IA)
 
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Flet](https://img.shields.io/badge/Flet-Framework-2EA043?style=for-the-badge&logo=flutter&logoColor=white)
-![Gemini](https://img.shields.io/badge/AI-Google%20Gemini%201.5-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Production-success?style=for-the-badge)
+![Gemini](https://img.shields.io/badge/IA-Google%20Gemini%201.5-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Produção-success?style=for-the-badge)
 
-> **UCA - SubFix** is a specialized desktop application designed to automate the correction of subtitles (`.srt` and `.vtt`) for technical training videos at **Universidade Corporativa Alterdata**.
+> **UCA - SubFix** é um aplicativo desktop especializado projetado para automatizar a correção de legendas (`.srt` e `.vtt`) para vídeos de treinamento técnico na **Universidade Corporativa Alterdata**.
 
-It combines **Generative AI (Google Gemini 1.5 Flash)** with **Regex-based Rule Enforcement** to fix phonetic errors, specific Rio de Janeiro accents ("Carioca"), and technical product terminology that standard ASR (Automatic Speech Recognition) tools fail to capture.
+Combina **IA Generativa (Google Gemini 1.5 Flash)** com **Aplicação de Regras baseadas em Regex** para corrigir erros fonéticos, sotaques específicos do Rio de Janeiro ("Carioca") e terminologia técnica de produtos que ferramentas padrão de ASR (Reconhecimento Automático de Fala) não conseguem capturar.
 
 ---
 
-## 📸 Screenshots
+## 📸 Capturas de Tela
 
 <div align="center">
-  <img src="assets/screenshots/preview.png" alt="Application Interface" width="100%">
+  <img src="assets/screenshots/preview.png" alt="Interface da Aplicação" width="100%">
   <br>
 </div>
 
 ---
 
-## 🚀 The Problem it Solves
+## 🚀 O Problema que Resolve
 
-Standard transcription services (like Vimeo or YouTube auto-captions) struggle with:
+Serviços padrão de transcrição (como legendas automáticas do Vimeo ou YouTube) têm dificuldade com:
 
-1.  **Technical Jargon:** Confusing "Spice Desktop" with "os pais" or "spi se".
-2.  **Brand Names:** Writing "Alter data" instead of "Alterdata".
-3.  **Local Accents:** Misinterpreting the "Carioca" accent (Rio de Janeiro), leading to severe phonetic errors.
-4.  **Context:** Failing to understand if "comando" refers to the verb or the product "Comanda Mobile".
+1.  **Jargão Técnico:** Confundem "Spice Desktop" com "os pais" ou "spi se".
+2.  **Nomes de Marcas:** Escrevem "Alter data" em vez de "Alterdata".
+3.  **Sotaques Regionais:** Interpretam incorretamente o sotaque "Carioca" (Rio de Janeiro), levando a erros fonéticos graves.
+4.  **Contexto:** Não compreendem se "comando" se refere ao verbo ou ao produto "Comanda Mobile".
 
-### 💡 The Solution (Hybrid Engine)
-**SubFix solves this by using a two-layer approach:**
-* **Layer 1 (AI):** Uses Gemini 1.5 to understand the full context of the lesson, fix grammar, punctuation, and sentence structure.
-* **Layer 2 (Code):** Applies a "Brute Force" Regex filter to guarantee 100% accuracy on corporate product names.
-
----
-
-## ✨ Key Features
-
-* **Context-Aware Correction:** Upload PDF manuals to feed the AI with specific domain knowledge before processing.
-* **Smart Batch Processing:** Processes entire folders of subtitles automatically.
-* **Hybrid Correction Engine:**
-    * Fixes specific product names: *Bimer, Pack, Shop, Spice, Comanda*.
-    * Fixes common transcription vices: *vae -> vai*, *eh -> é*.
-* **Modern UI:** Built with **Flet** (Flutter for Python), featuring a responsive Dark Mode interface.
-* **Security:** API Keys are input by the user at runtime and are not hardcoded.
-* **Executable:** Compiles into a single portable `.exe` file.
+### 💡 A Solução (Motor Híbrido)
+**SubFix resolve isso usando uma abordagem de duas camadas:**
+* **Camada 1 (IA):** Usa o Gemini 1.5 para entender o contexto completo da aula, corrigir gramática, pontuação e estrutura das frases.
+* **Camada 2 (Código):** Aplica um filtro Regex de "Força Bruta" para garantir 100% de precisão nos nomes dos produtos corporativos.
 
 ---
 
-## 🛠️ Tech Stack
+## ✨ Funcionalidades Principais
 
-* **Language:** Python 3.11+
-* **GUI Framework:** [Flet](https://flet.dev/)
-* **AI Model:** Google Gemini 1.5 Flash (via `google-generativeai`)
-* **Utilities:** `re` (Regex), `sys`, `os`
-* **Build Tool:** PyInstaller / Flet Pack
+* **Correção com Consciência Contextual:** Faça upload de manuais em PDF para alimentar a IA com conhecimento específico do domínio antes do processamento.
+* **Processamento em Lote Inteligente:** Processa pastas inteiras de legendas automaticamente.
+* **Motor de Correção Híbrido:**
+    * Corrige nomes específicos de produtos: *Bimer, Pack, Shop, Spice, Comanda*.
+    * Corrige vícios comuns de transcrição: *vae -> vai*, *eh -> é*.
+* **Interface Moderna:** Construída com **Flet** (Flutter para Python), apresentando uma interface responsiva em Modo Escuro.
+* **Segurança:** As Chaves de API são inseridas pelo usuário durante a execução e não são embutidas no código.
+* **Executável:** Compilado em um único arquivo portátil `.exe`.
 
 ---
 
-## 📦 How to Run (Development)
+## 🛠️ Tecnologias Utilizadas
 
-1.  **Clone the repository:**
+* **Linguagem:** Python 3.11+
+* **Framework de Interface:** [Flet](https://flet.dev/)
+* **Modelo de IA:** Google Gemini 1.5 Flash (via `google-generativeai`)
+* **Utilitários:** `re` (Regex), `sys`, `os`
+* **Ferramenta de Build:** PyInstaller / Flet Pack
+
+---
+
+## 📦 Como Executar (Desenvolvimento)
+
+1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/kenjishimizu2411/UCA_SubFix.git](https://github.com/kenjishimizu2411/UCA_SubFix.git)
+    git clone https://github.com/kenjishimizu2411/UCA_SubFix.git
     cd UCA_SubFix
     ```
 
-2.  **Create a Virtual Environment:**
+2.  **Crie um Ambiente Virtual:**
     ```bash
     python -m venv venv
     
@@ -78,45 +78,39 @@ Standard transcription services (like Vimeo or YouTube auto-captions) struggle w
     source venv/bin/activate
     ```
 
-3.  **Install Dependencies:**
+3.  **Instale as Dependências:**
     ```bash
     pip install -r requirements.txt
     ```
-    *(Note: Ensure `flet`, `google-generativeai` and `pyinstaller` are installed)*
+    *(Nota: Certifique-se de que `flet`, `google-generativeai` e `pyinstaller` estão instalados)*
 
-4.  **Run the App:**
+4.  **Execute o Aplicativo:**
     ```bash
     flet run main.py
     ```
 
 ---
 
-## 🏗️ How to Build (.EXE)
+## 🏗️ Como Compilar (.EXE)
 
-To generate the standalone executable for Windows distribution:
+Para gerar o executável standalone para distribuição no Windows:
 
-1.  Ensure you have the assets folder (`assets/`) containing `logo_uca.ico` and `logo_uca.png`.
-2.  Run the packing command (using Flet Pack to handle metadata):
-
-```powershell
-flet pack main.py --name "UCA_SubFix" --icon "assets/logo_uca.ico" --add-data "assets;assets"
-```
-> The output file will be located in the `dist/` folder.
+1.  Certifique-se de ter a pasta de assets (`assets/`) contendo `logo_uca.ico` e `logo_uca.png`.
+2.  Execute o comando de empacotamento (usando Flet Pack para lidar com metadados):
 
 ---
 
-## 📝 Usage Guide
+## 📝 Guia de Utilização
 
-1.  **Step 1:** Select the folder containing the raw `.srt` or `.vtt` files.
-2.  **Step 2 (Optional):** Select PDF manuals to provide context to the AI.
-3.  **Step 3:** Enter your **Google AI Studio API Key**.
-4.  **Step 4:** Click **EXECUTE CORRECTION**.
-5.  **Step 5:** Monitor the "Execution Log". The corrected files will be saved in the same folder with the suffix `_corrigido`.
+* **Passo 1:** Selecione a pasta contendo os arquivos .srt ou .vtt originais.
+* **Passo 2 (Opcional):** Selecione manuais em PDF para fornecer contexto à IA.
+* **Passo 3:** Insira sua Chave de API do Google AI Studio.
+* **Passo 4:** Clique em EXECUTAR CORREÇÃO.
+* **Passo 5:** Monitore o "Log de Execução". Os arquivos corrigidos serão salvos na mesma pasta com o sufixo _corrigido.
 
 ---
 
 <p align="center">
-<strong>Developed for Universidade Corporativa Alterdata</strong><br>
+<strong>Desenvolvido para a Universidade Corporativa Alterdata</strong><br>
 👤 <strong>Kenji Shimizu</strong><br>
-<a href="https://github.com/kenjishimizu2411">GitHub Profile</a>
 </p>
